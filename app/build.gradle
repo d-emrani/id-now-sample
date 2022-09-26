@@ -42,16 +42,14 @@ android {
 
 dependencies {
     implementation 'de.idnow.android.sdk:idnow-platform:4.19.1'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+
     implementation 'de.idnow.insights:idnow-android-insights-sdk:1.0.0'
     implementation 'androidx.camera:camera-video:1.1.0'
     implementation 'org.msgpack:jackson-dataformat-msgpack:0.9.3'
     implementation 'org.msgpack:msgpack-core:0.9.3'
     implementation 'com.google.guava:guava:31.1-android'
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.5.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'com.google.android.material:material:1.6.1'
 }
