@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace 'com.example.idnowsample'
-    compileSdk 31
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.idnowsample"
-        minSdk 21
+        minSdk 24
         targetSdk 31
         versionCode 1
         versionName "1.0"
@@ -18,7 +18,7 @@ android {
 
         renderscriptTargetApi 21
         renderscriptSupportModeEnabled true
-        vectorDrawables.useSupportLibrary = true
+        vectorDrawables.useSupportLibrary true
     }
 
     buildTypes {
@@ -28,11 +28,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = JavaVersion.VERSION_11
     }
 
     packagingOptions {
@@ -43,6 +43,10 @@ android {
 dependencies {
     implementation 'de.idnow.android.sdk:idnow-platform:4.19.1'
     implementation 'de.idnow.insights:idnow-android-insights-sdk:1.0.0'
+    implementation 'androidx.camera:camera-video:1.1.0'
+    implementation 'org.msgpack:jackson-dataformat-msgpack:0.9.3'
+    implementation 'org.msgpack:msgpack-core:0.9.3'
+    implementation 'com.google.guava:guava:31.1-android'
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
