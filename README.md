@@ -1,5 +1,7 @@
 This sample app showcases the problems when including the id-now sdk to an app.
 
+⚠️ **Make sure NDK version 23.2.8568313 is installed (via Android Studio SDK manager)**
+
 The following errors are shown during the build:
 ```
 > Task :app:mergeDebugNativeLibs
@@ -40,5 +42,13 @@ Inputs:
 
 
 > Task :app:stripDebugDebugSymbols
-Unable to strip the following libraries, packaging them as they are: libPhoenixAndroid.so, libRSSupport.so, libZoomDummy.so, libidnow_tracking.so, libimage_processing_util_jni.so, librsjni.so, librsjni_androidx.so.
+/Users/emrani/Library/Android/sdk/ndk/23.2.8568313/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-strip: error: program header with offset 0x23ef80 and file size 0xb080 goes past the end of the file
+
+/Users/emrani/Library/Android/sdk/ndk/23.2.8568313/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-strip: error: Info field value 22 in section .rela.plt is invalid
+
+/Users/emrani/Library/Android/sdk/ndk/23.2.8568313/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-strip: error: '/Users/emrani/AndroidStudioProjects/IdNowSample/app/build/intermediates/merged_native_libs/debug/out/lib/x86_64/libPhoenixAndroid.so': The file was not recognized as a valid object file
+
+/Users/emrani/Library/Android/sdk/ndk/23.2.8568313/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-strip: error: '/Users/emrani/AndroidStudioProjects/IdNowSample/app/build/intermediates/merged_native_libs/debug/out/lib/x86/libZoomDummy.so': The file was not recognized as a valid object file
+
+Unable to strip the following libraries, packaging them as they are: libPhoenixAndroid.so, libZoomDummy.so.
 ```
